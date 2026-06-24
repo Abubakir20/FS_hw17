@@ -9,4 +9,4 @@ function isTub (number) {
     return true;
 }
 
-console.log(isTub(19));
+console.log(isTub(1));

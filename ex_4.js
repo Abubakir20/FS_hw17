@@ -1,15 +1,19 @@
 function checkAnagram(word1, word2) {
-    let check = false
-    if (word1.length == word2.length) {
-        for (let i of word1) {
-            check = (word2.includes(i)) ? true : false;
-            if(!check) return false;  
-        }
-    } else {
-        return check;
+    if (word1.length !== word2.length) {
+        return false;
     }
-    
-    return check;
+
+    word2 = word2.split('');
+
+    for (let i of word1) {
+        if (!word2.includes(i)) {
+            return false;
+        }
+
+        word2.splice(word2.indexOf(i), 1);
+    }
+
+    return true;
 }
 
-console.log(checkAnagram("listen", "silent"));
+console.log(checkAnagram("aab", "abb"));

@@ -5,11 +5,12 @@ function fibonachi (n) {
     let b = 1;
 
     for (let i = 0; i < n; i++) {
-        console.log(a);
+        arr.push(a);
         let c = a + b;
         a = b;
         b = c;
     }
+    return arr;
 }
 
-fibonachi(7);
+console.log(fibonachi(7));
